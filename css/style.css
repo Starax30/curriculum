@@ -1,0 +1,109 @@
+/* Hero-sectie met achtergrondafbeelding */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Zorgt ervoor dat de afbeelding 60% van de viewporthoogte gebruikt */
+    overflow: hidden;
+}
+
+/* Achtergrondafbeelding met blur-effect */
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/encoraimage.jpg'); /* Pas het pad aan naar jouw afbeelding */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Pas de blur aan */
+}
+
+/* Tekst op de afbeelding */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparante achtergrond */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sidebar standaard verborgen */
+#sidebar {
+    position: fixed;
+    right: -250px; /* Startpositie buiten scherm */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #f8f9fa;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  /* Sidebar geopend */
+  #sidebar.open {
+    right: 0;
+  }
+  
+  /* Sidebar-knop */
+  #toggle-sidebar {
+    position: absolute;
+    left: -60px;
+    top: 10px;
+    background: rgba(0, 0, 0, 0.482);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 40px;
+  }
+  
+  /* Tooltip stijl */
+  #tooltip {
+    position: absolute;
+    left: -180px;
+    top: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Verbergen standaard */
+    white-space: nowrap;
+  }
+  
+  /* Sidebar-content standaard verborgen */
+  .sidebar-content {
+    display: none;
+  }
+  
+  /* Sidebar-content tonen als geopend */
+  #sidebar.open .sidebar-content {
+    display: block;
+  }
+  
+  .arrow-indicator {
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: yellow;
+    animation: bounce 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(10px);
+    }
+}
