@@ -107,3 +107,21 @@
         transform: translateY(-50%) translateX(10px);
     }
 }
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Ruimte tussen knoppen */
+  flex-wrap: wrap; /* Laat de knoppen op kleinere schermen naar beneden vallen */
+}
+
+.contact-buttons button {
+  flex: 1;
+  min-width: 100px; /* Zorgt ervoor dat alle knoppen minstens even groot zijn */
+  max-width: 150px;
+  text-align: center;
+}
+
+.display{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
