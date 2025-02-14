@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.display = "none";
     });
 
-    // Sidebar openen/sluiten bij klikken
-    toggleBtn.addEventListener("click", function () {
+    // Sidebar openen/sluiten bij klikken op de knop of de pijl
+    function toggleSidebar() {
         sidebar.classList.toggle("open");
 
         // Verberg de pijl wanneer de sidebar wordt geopend
@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             arrowIndicator.style.display = "block";
         }
-    });
+    }
+
+    toggleBtn.addEventListener("click", toggleSidebar);
+    arrowIndicator.addEventListener("click", toggleSidebar); // Maak de pijl ook klikbaar
 
     // Tooltip tonen bij het laden van de pagina voor 2 seconden
     tooltip.style.display = "block";
@@ -37,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.display = "none";
     }, 2000);
 });
+
 
 function updateProgress() {
     let slider = document.getElementById("slider");
