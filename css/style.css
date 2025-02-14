@@ -125,3 +125,11 @@
 .display{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.progress {
+  height: 20px;
+}
+.progress-bar {
+  transition: width 0.4s ease-in-out;
+}
+

@@ -37,3 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.display = "none";
     }, 2000);
 });
+
+function updateProgress() {
+    let slider = document.getElementById("slider");
+    let percentage = slider.value;
+    let progressBar = document.getElementById("progress-bar");
+    
+    progressBar.style.width = percentage + "%";
+    progressBar.innerText = percentage + "%";
+    document.getElementById("percentage").innerText = percentage + "%";
+}
