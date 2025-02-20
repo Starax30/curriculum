@@ -133,3 +133,61 @@
   transition: width 0.4s ease-in-out;
 }
 
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  animation: scroll 10s linear infinite;
+}
+
+.book-card {
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.book-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.book-card h4, .book-card p {
+  display: block;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4.5em;
+}
+
+@media (max-width: 600px) {
+  .book-card {
+    width: 200px; /* Kleinere kaarten op mobiel */
+    padding: 10px;
+  }
+  .carousel-track{
+    animation: scroll 18s linear infinite;
+  }
+  .carousel-container{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

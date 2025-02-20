@@ -45,3 +45,9 @@ function updateProgress() {
     progressBar.innerText = percentage + "%";
     document.getElementById("percentage").innerText = percentage + "%";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector(".carousel-track");
+    track.innerHTML += track.innerHTML; // Dupliceer de inhoud voor een naadloze loop
+  });
+
