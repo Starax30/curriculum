@@ -46,8 +46,44 @@ function updateProgress() {
     document.getElementById("percentage").innerText = percentage + "%";
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const track = document.querySelector(".carousel-track");
-    track.innerHTML += track.innerHTML; // Dupliceer de inhoud voor een naadloze loop
-  });
+    const items = Array.from(track.children);
+    
+    // Dupliceer de items voor een vloeiende scroll
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+    
+    track.style.display = "flex";
+    track.style.gap = "20px";
+    track.style.willChange = "transform";
+    track.style.animation = "scroll 14s linear infinite";
 
+    function updateAnimationSpeed() {
+        if (window.innerWidth <= 600) {
+            track.style.animation = "scroll 20s linear infinite";
+        } else {
+            track.style.animation = "scroll 14s linear infinite";
+        }
+    }
+
+    window.addEventListener("resize", updateAnimationSpeed);
+    updateAnimationSpeed(); // Initial call
+
+    // Pas de hero-sectie aan voor kleinere schermen
+    function updateHeroSection() {
+        const heroSection = document.querySelector(".hero-section");
+        if (window.innerWidth <= 600) {
+            heroSection.style.height = "40vh"; // Maak de hero-sectie kleiner
+        } else {
+            heroSection.style.height = "60vh";
+        }
+    }
+
+    window.addEventListener("resize", updateHeroSection);
+    updateHeroSection(); // Initial call
+});

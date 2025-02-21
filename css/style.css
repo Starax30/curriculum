@@ -144,7 +144,7 @@
   display: flex;
   gap: 20px;
   will-change: transform;
-  animation: scroll 10s linear infinite;
+  animation: scroll 14s linear infinite;
 }
 
 .book-card {
@@ -170,7 +170,6 @@
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 4.5em;
 }
 
 @media (max-width: 600px) {
@@ -179,7 +178,7 @@
     padding: 10px;
   }
   .carousel-track{
-    animation: scroll 18s linear infinite;
+    animation: scroll 20s linear infinite;
   }
   .carousel-container{
     display: flex;
