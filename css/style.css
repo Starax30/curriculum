@@ -199,3 +199,60 @@
   100% { transform: translateX(-5%); }
 }
 
+/* Algemene stijl */
+body {
+  background-color: #050505;
+  color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1, h2, label {
+  font-weight: 600;
+}
+
+/* Header */
+header .btn {
+  font-size: 1.1rem;
+}
+header .btn i {
+  font-size: 1.2rem;
+}
+
+/* Formulierelementen */
+.form-control {
+  background-color: #131313;
+  border: 1px solid #5a5959;
+  color: #f8f9fa;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: none;
+  box-shadow: none;
+}
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Sidebar contactinfo en kaart */
+.bg-secondary.bg-opacity-25 {
+  background-color: #494e54 !important; /* iets lichter dan de body-achtergrond */
+}
+aside ul li i {
+  /* icoontjes in de lijst krijgen dezelfde kleur als tekst */
+  color: #f8f9fa;
+}
+aside ul li a:hover {
+  color: #dee2e6;
+  text-decoration: underline;
+}
+
+/* Kaart container */
+#map {
+  height: 250px;
+  border: 2px solid #b1afaf;
+  border-radius: 4px;
+}

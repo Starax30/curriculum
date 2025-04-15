@@ -119,3 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+    // Initialiseer de kaart met centrum en zoom
+    const map = L.map('map').setView([51.17, 4.45], 13);
+    // Voeg OpenStreetMap tiles toe met attributie
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    // Plaats een marker op de kaart
+    L.marker([51.17, 4.45]).addTo(map);
