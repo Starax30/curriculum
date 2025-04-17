@@ -256,3 +256,22 @@ aside ul li a:hover {
   border: 2px solid #b1afaf;
   border-radius: 4px;
 }
+
+/* Tooltip voor tabelrijen */
+#row-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  white-space: nowrap;
+}
+
+/* Zijbalk gesloten positie op brede schermen (pijl zichtbaar) */
+@media (min-width: 600px) {
+  #sidebar {
+    right: -180px;
+  }
+}
